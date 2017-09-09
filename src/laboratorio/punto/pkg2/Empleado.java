@@ -12,7 +12,7 @@ public class Empleado {
     private double horasTrabajadas;
     private double valorPagoTotal ;
 
-    public Empleado(float salario, String nombre, String contrato, double horaEntrada, double horaSalida) {
+    public Empleado(double salario, String nombre, String contrato, double horaEntrada, double horaSalida) {
         this.salario = salario;
         this.nombre = nombre;
         this.contrato = contrato;
@@ -48,7 +48,7 @@ public class Empleado {
         return valorPagoTotal;
     }
 
-    public void setSalario(float salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 
@@ -64,8 +64,18 @@ public class Empleado {
         this.horasTrabajadas = horasTrabajadas;
     }
 
-    public void setValorPagoTotal(float valorPagoTotal) {
+    public void setValorPagoTotal(double valorPagoTotal) {
         this.valorPagoTotal = valorPagoTotal;
+    }
+    
+    public double calcularHorasTrabajadas(double horaEntrada, double horaSalida ){
+        this.horasTrabajadas = horaSalida - horaEntrada;
+        return horasTrabajadas;
+    }
+    
+    public double calcularPagoSalario (double horasTrabajadas, double salario) {
+        this.valorPagoTotal = horasTrabajadas*salario;
+        return valorPagoTotal;
     }
     
     
