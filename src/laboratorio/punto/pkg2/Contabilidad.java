@@ -38,7 +38,7 @@ public class Contabilidad {
         return GananciasMensuales;
     }
 
-    public void ventasDiarias(int Dia, ArrayList<Venta> Ventas) {
+    public void mostrarVentasDiarias(int Dia, ArrayList<Venta> Ventas) {
         for (Venta v : Ventas) {
             if (Dia == v.getFecha().getDia()) {
                 System.out.println(v);
@@ -47,8 +47,19 @@ public class Contabilidad {
         }
 
     }
+    
+     public double valorVentasDiarias(int Dia, ArrayList<Venta> Ventas) {
+         double valor = 0;
+        for (Venta v : Ventas) {
+            if (Dia == v.getFecha().getDia()) {
+                valor+= v.getTotal();
+            } else {
+            }
+        }
+        return valor;
+    }
 
-    public void ventasMensuales(int Mes, ArrayList<Venta> Ventas) {
+    public void mostrarVentasMensuales(int Mes, ArrayList<Venta> Ventas) {
         for (Venta v : Ventas) {
             if (Mes == v.getFecha().getMes()) {
                 System.out.println(v);
@@ -57,4 +68,16 @@ public class Contabilidad {
         }
 
     }
+    public double valorVentasMensuales(int Mes, ArrayList<Venta> Ventas) {
+        double valor = 0;
+        for (Venta v : Ventas) {
+            if (Mes == v.getFecha().getMes()) {
+                valor+= v.getTotal();
+            } else {
+            }
+        }
+        return valor;
+    }
+
+
 }
