@@ -22,6 +22,24 @@ public class LABORATORIOPUNTO2 {
         System.out.println("4. VER LISTA DE EMPLEADOS");
         System.out.println("5. HACER PEDIDO A PROVEEDORES");
         System.out.println("6. CONSULTAR CONTABILIDAD");
+        
+        int desicion = in.nextInt();
+        switch(desicion){
+            case 1: System.out.println("");
+                break;
+            case 2: System.out.println("");
+                break;
+            case 3: System.out.println("");
+                break;
+            case 4: System.out.println("");
+                break;
+            case 5: System.out.println("");
+                break;
+            case 6: System.out.println("");
+                break;
+            default: System.out.println("");
+                break;
+        }
 
     }
 
