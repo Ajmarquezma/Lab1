@@ -17,6 +17,11 @@ public class Producto {
         this.precioCompraAProveedor = precioCompra;
         this.precioVenta = precioVenta;
     }
+    
+     public Producto(String nombre, double precioVenta) {
+        this.nombre = nombre;
+        this.precioVenta = precioVenta;
+    }
 
     public String getNombre() {
         return nombre;

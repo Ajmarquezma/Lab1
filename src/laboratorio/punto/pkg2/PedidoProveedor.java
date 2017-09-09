@@ -40,6 +40,10 @@ public class PedidoProveedor {
         return cantidadProducto;
     }
     
-    
+    public double HacerPedido(double precioVenta, int cantidadProducto){
+        double total_dinero_pedido;
+        total_dinero_pedido = precioVenta * cantidadProducto;
+        return total_dinero_pedido;
+    }
     
 }
