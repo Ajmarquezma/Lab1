@@ -8,9 +8,9 @@ public class Inventario {
     
     private int cantidad;
     private Producto producto;
-    private VentasDiarias ventasDiarias;
+    private SubtotalVentas ventasDiarias;
 
-    public Inventario(int cantidad, Producto producto, VentasDiarias ventasDiarias) {
+    public Inventario(int cantidad, Producto producto, SubtotalVentas ventasDiarias) {
         this.cantidad = cantidad;
         this.producto = producto;
         this.ventasDiarias = ventasDiarias;
@@ -24,7 +24,7 @@ public class Inventario {
         return producto;
     }
 
-    public VentasDiarias getVentasDiarias() {
+    public SubtotalVentas getVentasDiarias() {
         return ventasDiarias;
     }
     

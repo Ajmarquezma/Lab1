@@ -6,9 +6,9 @@ package laboratorio.punto.pkg2;
  */
 public class VentasMensuales {
     
-    private VentasDiarias ventasDiarias;
+    private SubtotalVentas ventasDiarias;
 
-    public VentasDiarias getVentasDiarias() {
+    public SubtotalVentas getVentasDiarias() {
         return ventasDiarias;
     }
     

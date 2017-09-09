@@ -1,14 +1,15 @@
 package laboratorio.punto.pkg2;
 
+import java.util.*;
+
 /**
  *
  * @author Juan Esteban Muñoz
  */
 public class Contabilidad {
-    
+
     private PedidoProveedor pedidoProveedor;
-    private VentasDiarias ventasDiarias;
-    private VentasMensuales ventasMensuales;
+    private ArrayList<Venta> Ventas;
     private Empleado empleado;
     private double GananciasDiarias;
     private double GananciasMensuales;
@@ -17,12 +18,12 @@ public class Contabilidad {
         return pedidoProveedor;
     }
 
-    public VentasDiarias getVentasDiarias() {
-        return ventasDiarias;
+    public ArrayList<Venta> getVentas() {
+        return Ventas;
     }
 
-    public VentasMensuales getVentasMensuales() {
-        return ventasMensuales;
+    public void addVentas(Venta venta) {
+        Ventas.add(venta);
     }
 
     public Empleado getEmpleado() {
@@ -36,8 +37,24 @@ public class Contabilidad {
     public double getGananciasMensuales() {
         return GananciasMensuales;
     }
-    
-    
-    
-    
+
+    public void ventasDiarias(int Dia, ArrayList<Venta> Ventas) {
+        for (Venta v : Ventas) {
+            if (Dia == v.getFecha().getDia()) {
+                System.out.println(v);
+            } else {
+            }
+        }
+
+    }
+
+    public void ventasMensuales(int Mes, ArrayList<Venta> Ventas) {
+        for (Venta v : Ventas) {
+            if (Mes == v.getFecha().getMes()) {
+                System.out.println(v);
+            } else {
+            }
+        }
+
+    }
 }

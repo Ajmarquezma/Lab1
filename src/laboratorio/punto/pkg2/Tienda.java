@@ -14,7 +14,7 @@ public class Tienda {
     private Empleado empleado;
     private VentasMensuales ventasMensuales;
     private Contabilidad contabilidad;
-    private VentasDiarias ventasDiarias;
+    private SubtotalVentas ventasDiarias;
 
     public Tienda(String nombreTienda, String nombreDueño) {
         this.nombreTienda = nombreTienda;
@@ -53,7 +53,7 @@ public class Tienda {
         return contabilidad;
     }
 
-    public VentasDiarias getVentasDiarias() {
+    public SubtotalVentas getVentasDiarias() {
         return ventasDiarias;
     }
    

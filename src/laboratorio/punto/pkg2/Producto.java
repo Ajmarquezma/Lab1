@@ -5,7 +5,7 @@ package laboratorio.punto.pkg2;
  * @author Juan Esteban Muñoz
  */
 public class Producto {
-    
+
     private String nombre;
     private PedidoProveedor pedidoProveedor;
     private double precioCompraAProveedor;
@@ -41,5 +41,5 @@ public class Producto {
     public void setPrecioVenta(double precioVenta) {
         this.precioVenta = precioVenta;
     }
-       
+
 }
