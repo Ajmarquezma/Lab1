@@ -75,5 +75,17 @@ public class Tienda {
         }
         return info;
     }
-}
+    
+    public String listaEmpleados(){
+        String info = "";
+        for(int i = 0; i < empleado.size(); i++){
+            info += "Info. Empleado" + (i+1) + ":\n";
+            info += "salario" + empleado.get(i).getSalario()+ ":\n";
+            info += "nombre: " + empleado.get(i).getNombre()+ ":\n";
+            info += "contrato: " + empleado.get(i).getContrato()+ ":\n";
+            info += "horaEntrada: " + empleado.get(i).getHoraEntrada()+ ":\n";
+            info += "horaSalida: " + empleado.get(i).getHoraSalida()+ ":\n";
+        }
+        return info;
+    }
 
