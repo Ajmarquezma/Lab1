@@ -1,5 +1,7 @@
 package laboratorio.punto.pkg2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Juan Esteban Muñoz
@@ -9,9 +11,9 @@ public class Tienda {
     private String nombreTienda;
     private String nombreDueño;
     private PedidoProveedor pedidoProveedor;
-    private Producto producto;
+    private ArrayList<Producto> producto;
     private Inventario inventario;
-    private Empleado empleado;
+    private ArrayList<Empleado> empleado;
     private VentasMensuales ventasMensuales;
     private Contabilidad contabilidad;
     private VentasDiarias ventasDiarias;
@@ -33,7 +35,7 @@ public class Tienda {
         return pedidoProveedor;
     }
 
-    public Producto getProducto() {
+    public ArrayList<Producto> getProducto() {
         return producto;
     }
 
@@ -41,7 +43,7 @@ public class Tienda {
         return inventario;
     }
 
-    public Empleado getEmpleado() {
+    public ArrayList<Empleado> getEmpleado() {
         return empleado;
     }
 
@@ -57,7 +59,21 @@ public class Tienda {
         return ventasDiarias;
     }
    
+    public void addEmpleado(Empleado empleado){
+        this.empleado.add(empleado);
+    }
     
+    public void addProducto(Producto producto){
+        this.producto.add(producto);
+    }
     
+    public String listaProductos(){
+        String info = "";
+        for(int i = 0; i < producto.size(); i++){
+            info += "Nombre " + (i+1) + ":\n";
+            info += "Precio: " + producto.get(i).getPrecioVenta()+ "\n";
+        }
+        return info;
+    }
 }
 
