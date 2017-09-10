@@ -1,8 +1,6 @@
 package laboratorio.punto.pkg2;
-
 /**
- *
- * @author Juan Esteban Muñoz
+ * @author Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco - cpachecof@unal.edu.co / Aldo Marquez - @unal.edu.co
  */
 public class Inventario {
     
@@ -26,6 +24,20 @@ public class Inventario {
 
     public SubtotalVentas getVentasDiarias() {
         return ventasDiarias;
+    }
+    
+    public int obtenerCantidad( Producto producto, int cantidad ){
+        if (this.producto == ventasDiarias.getProducto()){
+        this.cantidad = cantidad - cantidad;
+        return cantidad;
+        }
+    }
+        
+    
+    public String avisoProducto (int cantidad ){
+        if (cantidad == 0){
+            System.out.println("Este producto se encuentra agotado");
+        }        
     }
     
     

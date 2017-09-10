@@ -1,10 +1,7 @@
 package laboratorio.punto.pkg2;
-
 import java.util.ArrayList;
-
 /**
- *
- * @author Juan Esteban Muñoz
+ * @Autores: Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco - cpachecof@unal.edu.co / Aldo Marquez - ajmarquezma@unal.edu.co
  */
 public class Tienda {
 
