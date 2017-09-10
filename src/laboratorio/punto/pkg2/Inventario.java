@@ -11,8 +11,13 @@ public class Inventario {
     private int cantidad;
     private Producto producto;
     private SubtotalVentas ventasDiarias;
+    TreeMap<String, Integer> inventariodeProductos;
 
+    public Inventario() {
+        this.inventariodeProductos = new TreeMap<>();
+    }
 
+    
 
 
     public int getCantidad() {
@@ -27,7 +32,7 @@ public class Inventario {
         return ventasDiarias;
     }
 
-    TreeMap<String, Integer> inventariodeProductos = new TreeMap<>();
+    
 
     public void addProducto(String nombre, Integer cantidad) {
         inventariodeProductos.put(nombre, cantidad);
