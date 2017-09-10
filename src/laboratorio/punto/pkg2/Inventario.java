@@ -18,6 +18,10 @@ public class Inventario {
         this.ventasDiarias = ventasDiarias;
     }
 
+    Inventario() {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
     public int getCantidad() {
         return cantidad;
     }

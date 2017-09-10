@@ -21,8 +21,9 @@ public class LABORATORIOPUNTO2 {
         Contabilidad contabilidad = new Contabilidad();
         Empleado empleado = new Empleado(1, "Aldo", "a", 1, 10);
         contabilidad.addEmpleados("Aldo", empleado);
+        Inventario inventario = new Inventario();
 
-        System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA" + Nombre_Tienda + " *****");
+        System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA " + Nombre_Tienda + " *****");
         System.out.println(" ¿QUE OPCION DESEA ESCOGER? :");
         System.out.println("1. AGREGAR UN PRODUCTO");
         System.out.println("2. AGREGAR UN EMPLEADO");
