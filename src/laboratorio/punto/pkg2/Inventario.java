@@ -28,14 +28,16 @@ public class Inventario {
     }
     
     TreeMap <String, Integer> inventariodeProductos = new TreeMap<>();
-       inventariodeProductos.put("Jabón", 35);
     
+    public void addProducto (String nombre, Integer cantidad){
+        inventariodeProductos.put("Arroz", 24);
+    }
+      
     public int obtenerCantidad( Producto producto, int cantidad ){
+        int cantidadActual = inventariodeProductos.get(producto.getNombre());
+        int nuevaCantidad = cantidadActual-cantidad;
         
-        if (this.producto == ventasDiarias.getProducto()){
-        this.cantidad = cantidad - cantidad
-        return cantidad;
-        }
+        inventariodeProductos.put(producto.getNombre(), nuevaCantidad);
     }
         
     
@@ -43,7 +45,6 @@ public class Inventario {
         if (cantidad == 0){
             System.out.println("Este producto se encuentra agotado");
         }        
-        return null;
     }
 
     

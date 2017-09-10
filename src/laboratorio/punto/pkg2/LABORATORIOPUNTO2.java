@@ -44,7 +44,7 @@ public class LABORATORIOPUNTO2 {
             default: System.out.println("");
                 break;
         }
-        if(desicion == 6){
+        if(decision == 6){
         System.out.println("1. CONSULTAR LAS VENTAS EN UN DIA");
         System.out.println("2. CONSULTAR LAS VENTAS EN UN MES");
         System.out.println("3. CONSULTAR LAS NOMINAS DE LOS EMPLEADOS");
