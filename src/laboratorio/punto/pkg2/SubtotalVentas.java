@@ -13,6 +13,7 @@ public class SubtotalVentas {
     public SubtotalVentas(Producto producto, int cantidadProducto, Inventario inventario) {
         this.producto = producto;
         this.cantidadProducto = cantidadProducto;
+        this.inventario = inventario;
         this.inventario.obtenerCantidad(producto, cantidadProducto);
 
     }

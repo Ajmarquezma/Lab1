@@ -39,9 +39,10 @@ public class SubtotalPedido {
         this.inventario = inventario;
     }
 
-    public SubtotalPedido(Producto producto, int cantidadProducto, Inventario inventario) {
+    public SubtotalPedido(Producto producto, Integer cantidadProducto,Inventario inventario) {
         this.producto = producto;
         this.cantidadProducto = cantidadProducto;
+        this.inventario = inventario;
         this.inventario.obtenerCantidadPedido(producto, cantidadProducto);
 
     }

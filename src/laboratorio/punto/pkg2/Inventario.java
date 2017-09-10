@@ -39,13 +39,14 @@ public class Inventario {
     }
 
     public void obtenerCantidad(Producto producto, Integer cantidad) {
-        Integer cantidadActual = inventariodeProductos.get(producto.getNombre());
+        addProducto(producto.getNombre(), cantidad);
+        Integer cantidadActual = this.inventariodeProductos.get(producto.getNombre());
         Integer nuevaCantidad = cantidadActual - cantidad;
 
         inventariodeProductos.put(producto.getNombre(), nuevaCantidad);
     }
     public void obtenerCantidadPedido(Producto producto, Integer cantidad) {
-        
+        addProducto(producto.getNombre(), cantidad);
         int cantidadActual = this.inventariodeProductos.get(producto.getNombre());
         int nuevaCantidad = cantidadActual + cantidad;
 
