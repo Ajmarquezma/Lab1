@@ -69,7 +69,14 @@ public class LABORATORIOPUNTO2 {
                 Tienda1.listaEmpleados();
                 break;
             case 5:
-                System.out.println("");
+                System.out.println("INTRODUZCA LOS DATOS DEL PEDIDO:");
+                System.out.println("Ingrese el nombre del Proveedor, la fecha Limite A Pagar y el dia, mes y año de realizacion del pedido:");
+                String nombreProveedor = in.nextLine();
+                double fechaLimiteAPagar = in.nextDouble();
+                int Dia = in.nextInt();
+                int Mes = in.nextInt();
+                int Año = in.nextInt();
+                PedidoProveedor p = new PedidoProveedor( nombreProveedor, fechaLimiteAPagar, new Fecha ( Dia, Mes, Año));
                 break;
             case 6: 
                 System.out.println("¿QUE DESEA CONSULTAR?");
