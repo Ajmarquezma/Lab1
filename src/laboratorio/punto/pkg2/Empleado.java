@@ -17,6 +17,8 @@ public class Empleado {
         this.contrato = contrato;
         this.horaEntrada = horaEntrada;
         this.horaSalida = horaSalida;
+        this.horasTrabajadas = horaSalida - horaEntrada;
+        this.valorPagoTotal = horasTrabajadas*salario;
     }
 
     public double getSalario() {
@@ -66,15 +68,10 @@ public class Empleado {
     public void setValorPagoTotal(double valorPagoTotal) {
         this.valorPagoTotal = valorPagoTotal;
     }
-    
-    public double calcularHorasTrabajadas(){
-        this.horasTrabajadas = horaSalida - horaEntrada;
-        return horasTrabajadas;
-    }
-    
-    public double calcularPagoSalario () {
-        this.valorPagoTotal = horasTrabajadas*salario;
-        return valorPagoTotal;
+  
+    @Override
+    public String toString() {
+        return "Empleado{" + "salario=" + salario + ", nombre=" + nombre + ", contrato=" + contrato + ", horaEntrada=" + horaEntrada + ", horaSalida=" + horaSalida + ", horasTrabajadas=" + horasTrabajadas + ", valorPagoTotal=" + valorPagoTotal + '}';
     }
     
     

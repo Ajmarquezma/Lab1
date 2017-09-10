@@ -8,7 +8,7 @@ public class LABORATORIOPUNTO2 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        
+       
         System.out.println("************ BIENVENIDO A TU TIENDA VIRTUAL ************");
         System.out.println("Porfavor ingrese los datos de la tienda:");
         System.out.println("Ingrese el Nombre de la Tienda y el Nombre del Dueño:");
@@ -16,6 +16,10 @@ public class LABORATORIOPUNTO2 {
         String Nombre_Dueño = in.nextLine();
         Tienda Tienda1 = new Tienda (Nombre_Tienda, Nombre_Dueño);
         Contabilidad contabilidad = new Contabilidad();
+        Empleado empleado = new Empleado(1,"Aldo","a",1,10);
+        contabilidad.addEmpleados("Aldo", empleado);
+        
+        contabilidad.getEmpleados("Aldo");
         
         System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA"+Nombre_Tienda+" *****");
         System.out.println(" ¿QUE OPCION DESEA ESCOGER? :");
