@@ -79,7 +79,7 @@ public class LABORATORIOPUNTO2 {
                 break;
             case 6: System.out.println("");
                 break;
-            default: System.out.println("¿QUE DESEA CONSULTAR?");
+            default: System.out.println("");
                 break;
         }
                     
