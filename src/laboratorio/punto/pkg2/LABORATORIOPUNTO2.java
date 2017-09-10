@@ -19,8 +19,7 @@ public class LABORATORIOPUNTO2 {
         String Nombre_Dueño = in.nextLine();
         Tienda Tienda1 = new Tienda(Nombre_Tienda, Nombre_Dueño);
         Contabilidad contabilidad = new Contabilidad();
-        Empleado empleado = new Empleado(1, "Aldo", "a", 1, 10);
-        contabilidad.addEmpleados("Aldo", empleado);
+        
 
         System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA" + Nombre_Tienda + " *****");
         System.out.println(" ¿QUE OPCION DESEA ESCOGER? :");
@@ -30,7 +29,7 @@ public class LABORATORIOPUNTO2 {
         System.out.println("4. VER LISTA DE EMPLEADOS");
         System.out.println("5. HACER PEDIDO A PROVEEDORES");
         System.out.println("6. CONSULTAR CONTABILIDAD");
-
+        System.out.println("7. HACER UNA VENTA");
         int decision = in.nextInt();
         switch(decision){
             case 1: 
@@ -58,7 +57,9 @@ public class LABORATORIOPUNTO2 {
                     String contrato = in.nextLine();
                     double horaEntrada = in.nextDouble();
                     double horaSalida = in.nextDouble();
-                    Tienda1.addEmpleado(new Empleado( salario, nombreEmpleado, contrato, horaEntrada, horaSalida));
+                    Empleado empleado = new Empleado( salario, nombreEmpleado, contrato, horaEntrada, horaSalida);
+                    Tienda1.addEmpleado(empleado);
+                    contabilidad.addEmpleados(nombreEmpleado, empleado);
                 }
                 System.out.println("");
                 break;
@@ -77,6 +78,19 @@ public class LABORATORIOPUNTO2 {
                 int Mes = in.nextInt();
                 int Año = in.nextInt();
                 PedidoProveedor p = new PedidoProveedor( nombreProveedor, fechaLimiteAPagar, new Fecha ( Dia, Mes, Año));
+                System.out.println("Ingrese el número de subtotales");
+                int nosubtotales = in.nextInt();
+                for ( int i = 0; i < nosubtotales ; i++){
+                    System.out.println("Datos subtotal "+(i+1)+" :");
+                    System.out.println("Digite el nombre del producto, El precio de compra del producto y el tipo del producto:");
+                    String nombreProducto = in.nextLine();
+                    double preciocompra = in.nextDouble();
+                    String tipoProducto = in.nextLine();
+                    SubtotalPedido a = new SubtotalPedido(new Producto(nombreProducto, preciocompra, tipoProducto),preciocompra, inventario);
+                    p.addSubtotal(a);
+                }
+                System.out.println(p);
+                
                 break;
             case 6: 
                 System.out.println("¿QUE DESEA CONSULTAR?");
@@ -137,6 +151,26 @@ public class LABORATORIOPUNTO2 {
                 default: System.out.println("Opcion no valida");
                     break;
                 }
+                break;
+            case 7:
+                System.out.println("INTRODUZCA LOS DATOS DE LA VENTA:");
+                System.out.println("Ingrese el dia, mes y año de realizacion de la venta:");
+                int Diav = in.nextInt();
+                int Mesv = in.nextInt();
+                int Añov = in.nextInt();
+                Venta v = new Venta( new Fecha ( Diav, Mesv, Añov));
+                System.out.println("Ingrese el número de subtotales");
+                int nosubtotalesv = in.nextInt();
+                for ( int i = 0; i < nosubtotalesv ; i++){
+                    System.out.println("Datos subtotal "+(i+1)+" :");
+                    System.out.println("Digite el nombre del producto, El precio de compra del producto y el tipo del producto:");
+                    String nombreProducto = in.nextLine();
+                    double preciocompra = in.nextDouble();
+                    String tipoProducto = in.nextLine();
+                    SubtotalVentas a = new SubtotalVentas(new Producto(nombreProducto, preciocompra, tipoProducto),preciocompra, inventario);
+                    v.addSubtotal(a);
+                }
+                System.out.println(v);
                 break;
             default: System.out.println("Opcion no valida");
                 break;
