@@ -6,10 +6,12 @@ public class SubtotalVentas {
 
     private Producto producto;
     private int cantidadProducto;
-
+    private Inventario inventario;
     public SubtotalVentas(Producto producto, int cantidadProducto) {
         this.producto = producto;
         this.cantidadProducto = cantidadProducto;
+        this.inventario.obtenerCantidad(producto, cantidadProducto);
+        
     }
 
     public Producto getProducto() {

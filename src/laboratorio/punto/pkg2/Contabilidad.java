@@ -8,9 +8,12 @@ public class Contabilidad {
     private PedidoProveedor pedidoProveedor;
     private ArrayList<Venta> Ventas;
     private TreeMap<String,Empleado> empleados;
-    private double GananciasDiarias;
-    private double GananciasMensuales;
-
+    
+    public Contabilidad() {
+        this.empleados = new TreeMap();
+    }
+    
+    
     public PedidoProveedor getPedidoProveedor() {
         return pedidoProveedor;
     }
@@ -23,20 +26,17 @@ public class Contabilidad {
         Ventas.add(venta);
     }
 
+ 
     public TreeMap<String, Empleado> getEmpleados() {
         return empleados;
     }
 
- 
-
-    public double getGananciasDiarias() {
-        return GananciasDiarias;
+    public void addEmpleados(String nombre, Empleado empleado){
+        empleados.put(nombre, empleado);
     }
-
-    public double getGananciasMensuales() {
-        return GananciasMensuales;
+    public void getEmpleados(String nombre){
+        System.out.println(empleados.get(nombre)); 
     }
-
     public void mostrarVentasDiarias(int Dia,int Mes, int Año) {
         for (Venta v : Ventas) {
             if ((Dia == v.getFecha().getDia())&&(Mes == v.getFecha().getMes())&&(Año == v.getFecha().getAño())) {
@@ -79,9 +79,10 @@ public class Contabilidad {
         
         return valor;
     }
-    public void consultarSalarioEmpleado(String nombre){
+    public double consultarSalarioEmpleado(String nombre){
        Empleado empleado = empleados.get(nombre);
-       empleado.getValorPagoTotal();
+        System.out.println(empleado.getValorPagoTotal());
+       return empleado.getValorPagoTotal();
     }
 
 }
