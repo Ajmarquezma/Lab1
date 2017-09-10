@@ -11,10 +11,10 @@ public class Inventario {
     private int cantidad;
     private Producto producto;
     private SubtotalVentas ventasDiarias;
-    TreeMap<String, Integer> inventariodeProductos;
-
+    private TreeMap<String, Integer> inventariodeProductos= new TreeMap();
+    
     public Inventario() {
-        this.inventariodeProductos = new TreeMap<>();
+        this.inventariodeProductos = new TreeMap();
     }
 
     
@@ -38,14 +38,15 @@ public class Inventario {
         inventariodeProductos.put(nombre, cantidad);
     }
 
-    public void obtenerCantidad(Producto producto, int cantidad) {
-        int cantidadActual = inventariodeProductos.get(producto.getNombre());
-        int nuevaCantidad = cantidadActual - cantidad;
+    public void obtenerCantidad(Producto producto, Integer cantidad) {
+        Integer cantidadActual = inventariodeProductos.get(producto.getNombre());
+        Integer nuevaCantidad = cantidadActual - cantidad;
 
         inventariodeProductos.put(producto.getNombre(), nuevaCantidad);
     }
-    public void obtenerCantidadPedido(Producto producto, int cantidad) {
-        int cantidadActual = inventariodeProductos.get(producto.getNombre());
+    public void obtenerCantidadPedido(Producto producto, Integer cantidad) {
+        
+        int cantidadActual = this.inventariodeProductos.get(producto.getNombre());
         int nuevaCantidad = cantidadActual + cantidad;
 
         inventariodeProductos.put(producto.getNombre(), nuevaCantidad);
