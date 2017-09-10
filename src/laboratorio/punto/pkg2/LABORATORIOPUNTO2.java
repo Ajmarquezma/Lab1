@@ -32,72 +32,86 @@ public class LABORATORIOPUNTO2 {
         System.out.println("6. CONSULTAR CONTABILIDAD");
 
         int decision = in.nextInt();
-        switch (decision) {
-            case 1:
+        switch(decision){
+            case 1: 
+                System.out.println("INGRESE LOS DATOS DEL NUEVO PRODUCTO:");
+                System.out.println("Digite cuantos productos quiere añadir a la lista:");
+                int Noproductos = in.nextInt();
+                for ( int i = 0; i < Noproductos ; i++){
+                    System.out.println("Datos Producto "+(i+1)+" :");
+                    System.out.println("Digite el nombre del producto, El precio del producto y el tipo del producto:");
+                    String nombreProducto = in.nextLine();
+                    double precioVenta = in.nextDouble();
+                    String tipoProducto = in.nextLine();
+                    Tienda1.addProducto(new Producto(nombreProducto, precioVenta, tipoProducto));
+                }
+                break;
+            case 2: 
+                System.out.println("INGRESE LOS DATOS DEL NUEVO EMPLEADO:");
+                System.out.println("Digite cuantos empleados quiere añadir a la lista:");
+                int Noempleado = in.nextInt();
+                for ( int i = 0; i < Noempleado ; i++){
+                    System.out.println("Datos Empleado "+(i+1)+" :");
+                    System.out.println("Digite el salario, el nombre del empleado, Duracion del contrato, la hora de Entrada y la hora de Salida");
+                    double salario = in.nextDouble();
+                    String nombreEmpleado = in.nextLine();
+                    String contrato = in.nextLine();
+                    double horaEntrada = in.nextDouble();
+                    double horaSalida = in.nextDouble();
+                    Tienda1.addEmpleado(new Empleado( salario, nombreEmpleado, contrato, horaEntrada, horaSalida));
+                }
                 System.out.println("");
                 break;
-            case 2:
-                System.out.println("");
+            case 3: System.out.println("LOS PRODUCTOS DE LA TIENDA " + Nombre_Tienda + "SON:");
+                Tienda1.listaProductos();
                 break;
-            case 3:
-                System.out.println("");
-                break;
-            case 4:
-                System.out.println("");
+            case 4: System.out.println("LOS EMPLEADOS DE LA TIENDA " + Nombre_Tienda + " SON:");
+                Tienda1.listaEmpleados();
                 break;
             case 5:
                 System.out.println("");
                 break;
-            case 6:
+            case 6: 
                 System.out.println("¿QUE DESEA CONSULTAR?");
-                break;
-            default:
-                System.out.println("");
-                break;
-        }
-        if (decision == 6) {
-            System.out.println("1. CONSULTAR LAS VENTAS EN UN DIA");
-            System.out.println("2. CONSULTAR LAS VENTAS EN UN MES");
-            System.out.println("3. CONSULTAR LAS NOMINAS DE LOS EMPLEADOS");
-            int consulta = in.nextInt();
-            switch (consulta) {
-                case 1:
-                    System.out.println("Ingrese un día a consultar");
+                System.out.println("1. CONSULTAR LAS VENTAS EN UN DIA");
+                System.out.println("2. CONSULTAR LAS VENTAS EN UN MES");
+                System.out.println("3. CONSULTAR LAS NOMINAS DE LOS EMPLEADOS");
+             int consulta= in.nextInt();
+             switch(consulta){
+                case 1: System.out.println("Ingrese un día a consultar");
                     int dia = in.nextInt();
                     System.out.println("Ingrese un mes a consultar");
                     int mes = in.nextInt();
                     System.out.println("Ingrese un año a consultar");
                     int año = in.nextInt();
-                    contabilidad.mostrarVentasDiarias(dia, mes, año);
+                    contabilidad.mostrarVentasDiarias(dia,mes,año);
                     break;
-                case 2:
-                    System.out.println("Ingrese un mes a consultar");
+                case 2: System.out.println("Ingrese un mes a consultar");
                     System.out.println("Ingrese un mes a consultar");
                     int mmes = in.nextInt();
                     System.out.println("Ingrese un año a consultar");
                     int aaño = in.nextInt();
-                    contabilidad.mostrarVentasMensuales(mmes, aaño);
+                    contabilidad.mostrarVentasMensuales(mmes,aaño);
                     break;
-                case 3:
-                    System.out.println("ingrese el nombre de un empleado");
-                    String nombre = in.next();
+                case 3: System.out.println("ingrese el nombre de un empleado");
+                    String nombre= in.next();
                     contabilidad.consultarSalarioEmpleado(nombre);
+                 break;
+                case 4: System.out.println("");
                     break;
-                case 4:
-                    System.out.println("");
+                case 5: System.out.println("");
                     break;
-                case 5:
-                    System.out.println("");
+                case 6: System.out.println("");
                     break;
-                case 6:
-                    System.out.println("");
+                default: System.out.println("");
                     break;
-                default:
-                    System.out.println("");
-                    break;
-            }
-
+                }
+                break;
+            default: System.out.println("Opcion no valida");
+                break;
         }
+                      
+                
     }
 
 }
