@@ -20,6 +20,10 @@ public class PedidoProveedor {
         this.subtotales = new ArrayList();
     }
 
+    public Fecha getFecha() {
+        return fecha;
+    }
+
     public void addSubtotal(SubtotalPedido sub) {
         subtotales.add(sub);
     }

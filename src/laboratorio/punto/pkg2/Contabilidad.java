@@ -91,4 +91,76 @@ public class Contabilidad {
         return empleado.getValorPagoTotal();
     }
 
+    
+    public void mostrarPagosDiarios(int Dia, int Mes, int Año) {
+        for (PedidoProveedor v : pedidos) {
+            if ((Dia == v.getFecha().getDia()) && (Mes == v.getFecha().getMes()) && (Año == v.getFecha().getAño())) {
+                System.out.println(v);
+            } else {
+            }
+        }
+
+    }
+
+    public double valorPagosDiarios(int Dia, int Mes, int Año) {
+        double valor = 0;
+        for (PedidoProveedor v : pedidos) {
+            if ((Dia == v.getFecha().getDia()) && (Mes == v.getFecha().getMes()) && (Año == v.getFecha().getAño())) {
+                valor += v.getTotal();
+            } else {
+            }
+        }
+        return valor;
+    }
+
+    public void mostrarPagosMensuales(int Mes, int Año) {
+        for (PedidoProveedor v : pedidos) {
+            if (Mes == v.getFecha().getMes() && (Año == v.getFecha().getAño())) {
+                System.out.println(v);
+            } else {
+            }
+        }
+
+    }
+
+    public double valorPagosMensuales(int Mes, int Año) {
+        double valor = 0;
+        for (PedidoProveedor v : pedidos) {
+            if (Mes == v.getFecha().getMes() && (Año == v.getFecha().getAño())) {
+                valor += v.getTotal();
+            } else {
+            }
+        }
+        
+        return valor;
+    }
+    
+    public double ingresosDiarios(int dia, int mes, int año){
+        double ingresos = 0;
+        double ventas = valorPagosDiarios(dia,mes,año);
+        double pagos = valorVentasDiarias(dia, mes, año);
+        ingresos = ventas-pagos;
+        
+        return ingresos;
+                
+    }
+    public void mostraringresosDiarios(int dia, int mes, int año){
+        System.out.println(ingresosDiarios(dia, mes, año));                
+    }
+    
+    public double ingresosMensuales(int mes, int año){
+        double ingresos = 0;
+        double ventas = valorVentasMensuales(mes, año);
+        double pagos = valorPagosMensuales(mes, año);
+        ingresos = ventas-pagos;
+        
+        return ingresos;
+                
+    }
+    
+    public void mostraringresosMensuales(int mes, int año){
+        
+        System.out.println(ingresosMensuales(mes, año));
+                
+    }
 }
