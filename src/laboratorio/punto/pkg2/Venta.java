@@ -1,7 +1,10 @@
 package laboratorio.punto.pkg2;
+
 import java.util.*;
+
 /**
- * @author Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco - cpachecof@unal.edu.co / Aldo Marquez - @unal.edu.co
+ * @author Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco -
+ * cpachecof@unal.edu.co / Aldo Marquez - @unal.edu.co
  */
 public class Venta {
 

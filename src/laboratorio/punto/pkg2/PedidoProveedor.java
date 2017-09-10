@@ -1,21 +1,27 @@
 package laboratorio.punto.pkg2;
+
+import java.util.ArrayList;
+
 /**
- * @Autores: Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco - cpachecof@unal.edu.co / Aldo Marquez - ajmarquezma@unal.edu.co
+ * @Autores: Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco -
+ * cpachecof@unal.edu.co / Aldo Marquez - ajmarquezma@unal.edu.co
  */
 public class PedidoProveedor {
-    
+
     private String nombreProveedor;
     private double fechaLimiteAPagar;
-    private String nombreProducto;
-    private double precioVenta;
-    private int cantidadProducto;
+    private ArrayList<SubtotalPedido> subtotales;
+    private Fecha fecha;
 
-    public PedidoProveedor(String nombreProveedor, double fechaLimite, String nombreProducto, double precioVenta, int cantidadProducto) {
+    public PedidoProveedor(String nombreProveedor, double fechaLimiteAPagar, Fecha fecha) {
         this.nombreProveedor = nombreProveedor;
-        this.fechaLimiteAPagar = fechaLimite;
-        this.nombreProducto = nombreProducto;
-        this.precioVenta = precioVenta;
-        this.cantidadProducto = cantidadProducto;
+        this.fechaLimiteAPagar = fechaLimiteAPagar;
+        this.fecha = fecha;
+        this.subtotales = new ArrayList();
+    }
+
+    public void addSubtotal(SubtotalPedido sub) {
+        subtotales.add(sub);
     }
 
     public String getNombreProveedor() {
@@ -26,22 +32,17 @@ public class PedidoProveedor {
         return fechaLimiteAPagar;
     }
 
-    public String getNombreProducto() {
-        return nombreProducto;
+    public double getTotal() {
+        double total = 0;
+        for (SubtotalPedido p : subtotales) {
+            total += p.getsubtotalPedido();
+        }
+        return total;
     }
 
-    public double getPrecioVenta() {
-        return precioVenta;
+    @Override
+    public String toString() {
+        return "PedidoProveedor:" + '\n' + "nombreProveedor: " + nombreProveedor + '\n' + "fechaLimiteAPagar: " + fechaLimiteAPagar + '\n' + "subtotales: " + subtotales + '\n' + "fecha del pedido: " + fecha + '\n' + "Total: " + getTotal();
     }
 
-    public int getCantidadProducto() {
-        return cantidadProducto;
-    }
-    
-    public double HacerPedido(double precioVenta, int cantidadProducto){
-        double total_dinero_pedido;
-        total_dinero_pedido = precioVenta * cantidadProducto;
-        return total_dinero_pedido;
-    }
-    
 }

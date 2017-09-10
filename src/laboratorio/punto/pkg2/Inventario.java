@@ -42,6 +42,12 @@ public class Inventario {
 
         inventariodeProductos.put(producto.getNombre(), nuevaCantidad);
     }
+    public void obtenerCantidadPedido(Producto producto, int cantidad) {
+        int cantidadActual = inventariodeProductos.get(producto.getNombre());
+        int nuevaCantidad = cantidadActual + cantidad;
+
+        inventariodeProductos.put(producto.getNombre(), nuevaCantidad);
+    }
 
     public void avisoProducto(int cantidad) {
         if (cantidad == 0) {
