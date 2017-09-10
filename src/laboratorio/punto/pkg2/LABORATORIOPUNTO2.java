@@ -29,9 +29,34 @@ public class LABORATORIOPUNTO2 {
         
         int decision = in.nextInt();
         switch(decision){
-            case 1: System.out.println("");
+            case 1: 
+                System.out.println("INGRESE LOS DATOS DEL NUEVO PRODUCTO:");
+                System.out.println("Digite cuantos productos quiere añadir a la lista:");
+                int Noproductos = in.nextInt();
+                for ( int i = 0; i < Noproductos ; i++){
+                    System.out.println("Datos Producto "+(i+1)+" :");
+                    System.out.println("Digite el nombre del producto, El precio del producto y el tipo del producto:");
+                    String nombreProducto = in.nextLine();
+                    double precioVenta = in.nextDouble();
+                    String tipoProducto = in.nextLine();
+                    Tienda1.addProducto(new Producto(nombreProducto, precioVenta, tipoProducto));
+                }
                 break;
-            case 2: System.out.println("");
+            case 2: 
+                System.out.println("INGRESE LOS DATOS DEL NUEVO EMPLEADO:");
+                System.out.println("Digite cuantos empleados quiere añadir a la lista:");
+                int Noempleado = in.nextInt();
+                for ( int i = 0; i < Noempleado ; i++){
+                    System.out.println("Datos Empleado "+(i+1)+" :");
+                    System.out.println("Digite el salario, el nombre del empleado, Duracion del contrato, la hora de Entrada y la hora de Salida");
+                    double salario = in.nextDouble();
+                    String nombreEmpleado = in.nextLine();
+                    String contrato = in.nextLine();
+                    double horaEntrada = in.nextDouble();
+                    double horaSalida = in.nextDouble();
+                    Tienda1.addEmpleado(new Empleado( salario, nombreEmpleado, contrato, horaEntrada, horaSalida));
+                }
+                System.out.println("");
                 break;
             case 3: System.out.println("");
                 break;
@@ -41,7 +66,7 @@ public class LABORATORIOPUNTO2 {
                 break;
             case 6: System.out.println("¿QUE DESEA CONSULTAR?");
                 break;
-            default: System.out.println("");
+            default: System.out.println("Opcion no valida");
                 break;
         }
         if(decision == 6){
