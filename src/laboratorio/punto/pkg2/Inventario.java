@@ -12,11 +12,8 @@ public class Inventario {
     private Producto producto;
     private SubtotalVentas ventasDiarias;
 
-    public Inventario(int cantidad, Producto producto, SubtotalVentas ventasDiarias) {
-        this.cantidad = cantidad;
-        this.producto = producto;
-        this.ventasDiarias = ventasDiarias;
-    }
+
+
 
     public int getCantidad() {
         return cantidad;

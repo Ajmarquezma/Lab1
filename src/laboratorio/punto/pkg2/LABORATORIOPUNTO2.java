@@ -19,9 +19,9 @@ public class LABORATORIOPUNTO2 {
         String Nombre_Dueño = in.nextLine();
         Tienda Tienda1 = new Tienda(Nombre_Tienda, Nombre_Dueño);
         Contabilidad contabilidad = new Contabilidad();
-        
+        Inventario inventario = new Inventario();
 
-        System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA" + Nombre_Tienda + " *****");
+        System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA " + Nombre_Tienda + " *****");
         System.out.println(" ¿QUE OPCION DESEA ESCOGER? :");
         System.out.println("1. AGREGAR UN PRODUCTO");
         System.out.println("2. AGREGAR UN EMPLEADO");
@@ -39,9 +39,9 @@ public class LABORATORIOPUNTO2 {
                 for ( int i = 0; i < Noproductos ; i++){
                     System.out.println("Datos Producto "+(i+1)+" :");
                     System.out.println("Digite el nombre del producto, El precio del producto y el tipo del producto:");
-                    String nombreProducto = in.nextLine();
+                    String nombreProducto = in.next();
                     double precioVenta = in.nextDouble();
-                    String tipoProducto = in.nextLine();
+                    String tipoProducto = in.next();
                     Tienda1.addProducto(new Producto(nombreProducto, precioVenta, tipoProducto));
                 }
                 break;
@@ -84,7 +84,7 @@ public class LABORATORIOPUNTO2 {
                     System.out.println("Datos subtotal "+(i+1)+" :");
                     System.out.println("Digite el nombre del producto, El precio de compra del producto y el tipo del producto:");
                     String nombreProducto = in.nextLine();
-                    double preciocompra = in.nextDouble();
+                    int preciocompra = in.nextInt();
                     String tipoProducto = in.nextLine();
                     SubtotalPedido a = new SubtotalPedido(new Producto(nombreProducto, preciocompra, tipoProducto),preciocompra, inventario);
                     p.addSubtotal(a);
@@ -165,7 +165,7 @@ public class LABORATORIOPUNTO2 {
                     System.out.println("Datos subtotal "+(i+1)+" :");
                     System.out.println("Digite el nombre del producto, El precio de compra del producto y el tipo del producto:");
                     String nombreProducto = in.nextLine();
-                    double preciocompra = in.nextDouble();
+                    int preciocompra = in.nextInt();
                     String tipoProducto = in.nextLine();
                     SubtotalVentas a = new SubtotalVentas(new Producto(nombreProducto, preciocompra, tipoProducto),preciocompra, inventario);
                     v.addSubtotal(a);

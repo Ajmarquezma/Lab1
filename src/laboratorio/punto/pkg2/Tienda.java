@@ -16,6 +16,9 @@ public class Tienda {
     public Tienda(String nombreTienda, String nombreDueño) {
         this.nombreTienda = nombreTienda;
         this.nombreDueño = nombreDueño;
+        this.empleado = new ArrayList();
+        this.producto = new ArrayList();
+        this.pedidoProveedor = new ArrayList();
     }
 
     public String getNombreTienda() {
