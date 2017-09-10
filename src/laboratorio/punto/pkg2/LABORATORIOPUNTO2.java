@@ -21,7 +21,7 @@ public class LABORATORIOPUNTO2 {
         
         contabilidad.getEmpleados("Aldo");
         
-        System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA"+Nombre_Tienda+" *****");
+        System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA "+Nombre_Tienda.toUpperCase()+ " *****");
         System.out.println(" ¿QUE OPCION DESEA ESCOGER? :");
         System.out.println("1. AGREGAR UN PRODUCTO");
         System.out.println("2. AGREGAR UN EMPLEADO");
@@ -62,9 +62,11 @@ public class LABORATORIOPUNTO2 {
                 }
                 System.out.println("");
                 break;
-            case 3: System.out.println("");
+            case 3: System.out.println("LOS PRODUCTOS DE LA TIENDA " + Nombre_Tienda + "SON:");
+                Tienda1.listaProductos();
                 break;
-            case 4: System.out.println("");
+            case 4: System.out.println("LOS EMPLEADOS DE LA TIENDA " + Nombre_Tienda + " SON:");
+                Tienda1.listaEmpleados();
                 break;
             case 5: System.out.println("");
                 break;
