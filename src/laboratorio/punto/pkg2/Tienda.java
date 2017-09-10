@@ -7,7 +7,7 @@ public class Tienda {
 
     private String nombreTienda;
     private String nombreDueño;
-    private PedidoProveedor pedidoProveedor;
+    private ArrayList<PedidoProveedor> pedidoProveedor;
     private ArrayList<Producto> producto;
     private Inventario inventario;
     private ArrayList<Empleado> empleado;
@@ -26,7 +26,7 @@ public class Tienda {
         return nombreDueño;
     }
 
-    public PedidoProveedor getPedidoProveedor() {
+    public ArrayList<PedidoProveedor> getPedidoProveedor() {
         return pedidoProveedor;
     }
 
