@@ -1,4 +1,5 @@
 package laboratorio.punto.pkg2;
+import java.util.TreeMap;
 /**
  * @author Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco - cpachecof@unal.edu.co / Aldo Marquez - @unal.edu.co
  */
@@ -7,7 +8,7 @@ public class Inventario {
     private int cantidad;
     private Producto producto;
     private SubtotalVentas ventasDiarias;
-
+    
     public Inventario(int cantidad, Producto producto, SubtotalVentas ventasDiarias) {
         this.cantidad = cantidad;
         this.producto = producto;
@@ -26,12 +27,17 @@ public class Inventario {
         return ventasDiarias;
     }
     
+    TreeMap <String, Integer> inventariodeProductos = new TreeMap<>();
+    
+    public void addProducto (String nombre, Integer cantidad){
+        inventariodeProductos.put("Arroz", 24);
+    }
+      
     public int obtenerCantidad( Producto producto, int cantidad ){
+        int cantidadActual = inventariodeProductos.get(producto.getNombre());
+        int nuevaCantidad = cantidadActual-cantidad;
         
-        if (this.producto == ventasDiarias.getProducto()){
-        this.cantidad = cantidad - cantidad;
-        }
-        return cantidad;
+        inventariodeProductos.put(producto.getNombre(), nuevaCantidad);
     }
         
     

@@ -10,7 +10,7 @@ public class LABORATORIOPUNTO2 {
         Scanner in = new Scanner(System.in);
        
         System.out.println("************ BIENVENIDO A TU TIENDA VIRTUAL ************");
-        System.out.println("Porfavor ingrese los datos de la tienda:");
+        System.out.println("Por favor ingrese los datos de la tienda:");
         System.out.println("Ingrese el Nombre de la Tienda y el Nombre del Dueño:");
         String Nombre_Tienda = in.nextLine();
         String Nombre_Dueño = in.nextLine();
@@ -31,8 +31,8 @@ public class LABORATORIOPUNTO2 {
         System.out.println("6. CONSULTAR CONTABILIDAD");
                 
         
-        int desicion = in.nextInt();
-        switch(desicion){
+        int decision = in.nextInt();
+        switch(decision){
             case 1: System.out.println("");
                 break;
             case 2: System.out.println("");
@@ -48,7 +48,7 @@ public class LABORATORIOPUNTO2 {
             default: System.out.println("");
                 break;
         }
-        if(desicion == 6){
+        if(decision == 6){
         System.out.println("1. CONSULTAR LAS VENTAS EN UN DIA");
         System.out.println("2. CONSULTAR LAS VENTAS EN UN MES");
         System.out.println("3. CONSULTAR LAS NOMINAS DE LOS EMPLEADOS");
