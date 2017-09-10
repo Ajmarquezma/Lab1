@@ -1,7 +1,6 @@
 package laboratorio.punto.pkg2;
 /**
- *
- * @author Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco - cpachecof@unal.edu.co / Aldo Marquez - @unal.edu.co
+ * @Autores: Juan Esteban Muñoz jemunozva@unal.edu.co / Mateo Pacheco - cpachecof@unal.edu.co / Aldo Marquez - ajmarquezma@unal.edu.co
  */
 public class Empleado {
     private double salario;
