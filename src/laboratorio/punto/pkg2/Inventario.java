@@ -31,20 +31,21 @@ public class Inventario {
        inventariodeProductos.put("Jabón", 35);
     
     public int obtenerCantidad( Producto producto, int cantidad ){
+        
         if (this.producto == ventasDiarias.getProducto()){
-        this.cantidad = cantidad - cantidad;
+        this.cantidad = cantidad - cantidad
         return cantidad;
         }
-        return 0;
     }
         
     
-    public String avisoProducto (int cantidad ){
+    public void avisoProducto (int cantidad ){
         if (cantidad == 0){
             System.out.println("Este producto se encuentra agotado");
         }        
         return null;
     }
+
     
     
 }

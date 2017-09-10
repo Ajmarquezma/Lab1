@@ -67,12 +67,12 @@ public class Empleado {
         this.valorPagoTotal = valorPagoTotal;
     }
     
-    public double calcularHorasTrabajadas(double horaEntrada, double horaSalida ){
+    public double calcularHorasTrabajadas(){
         this.horasTrabajadas = horaSalida - horaEntrada;
         return horasTrabajadas;
     }
     
-    public double calcularPagoSalario (double horasTrabajadas, double salario) {
+    public double calcularPagoSalario () {
         this.valorPagoTotal = horasTrabajadas*salario;
         return valorPagoTotal;
     }
