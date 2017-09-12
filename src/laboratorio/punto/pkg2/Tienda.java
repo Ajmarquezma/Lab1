@@ -60,23 +60,25 @@ public class Tienda {
     public String listaProductos() {
         String info = "";
         for (int i = 0; i < producto.size(); i++) {
-            info += "Nombre " + (i + 1) + ":\n";
+            info += "Info. Producto " + (i + 1) + "\n";
+            info += "Nombre: " + producto.get(i).getNombre() + "\n";
             info += "Precio: " + producto.get(i).getPrecioVenta() + "\n";
-            info += "Tipo de Producto: " + producto.get(i).getTipoProducto() + ":\n";
+            info += "Tipo de Producto: " + producto.get(i).getTipoProducto() + "\n";
+            info += "\n";
         }
         return info;
-        //System.out.println(info);
-    }
+           }
 
     public String listaEmpleados() {
         String info = "";
         for (int i = 0; i < empleado.size(); i++) {
-            info += "Info. Empleado" + (i + 1) + ":\n";
-            info += "salario" + empleado.get(i).getSalario() + ":\n";
-            info += "nombre: " + empleado.get(i).getNombre() + ":\n";
-            info += "contrato: " + empleado.get(i).getContrato() + ":\n";
-            info += "horaEntrada: " + empleado.get(i).getHoraEntrada() + ":\n";
-            info += "horaSalida: " + empleado.get(i).getHoraSalida() + ":\n";
+            info += "Info. Empleado" + (i + 1) + "\n";
+            info += "Salario: $" + empleado.get(i).getSalario() + "\n";
+            info += "Nombre: " + empleado.get(i).getNombre() + "\n";
+            info += "Contrato: " + empleado.get(i).getContrato() + " meses" + "\n";
+            info += "Hora de Entrada: " + empleado.get(i).getHoraEntrada() + "\n";
+            info += "Hora de Salida: " + empleado.get(i).getHoraSalida() + "\n";
+            info +="\n";
         }
         return info;
     }

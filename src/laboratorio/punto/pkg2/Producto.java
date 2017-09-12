@@ -10,8 +10,8 @@ public class Producto {
     private double precioVenta;
     private String tipoProducto;
 
-    public Producto(String nombre, PedidoProveedor pedidoProveedor, double precioCompra, double precioVenta, String tipoProducto) {
-        this.nombre = nombre;
+    public Producto(PedidoProveedor pedidoProveedor, double precioCompra, double precioVenta, String tipoProducto) {
+        //this.nombre = nombre;
         this.pedidoProveedor = pedidoProveedor;
         this.precioCompraAProveedor = precioCompra;
         this.precioVenta = precioVenta;

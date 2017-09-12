@@ -52,7 +52,7 @@ public class LABORATORIOPUNTO2 {
                 int Noempleado = in.nextInt();
                 for ( int i = 0; i < Noempleado ; i++){
                     System.out.println("Datos Empleado "+(i+1)+" :");
-                    System.out.println("Digite el salario, el nombre del empleado, Duracion del contrato en letras, la hora de Entrada asignada y la hora de Salida asignada");
+                    System.out.println("Digite el salario, el nombre del empleado, Duración del contrato en meses, la hora de Entrada asignada y la hora de Salida asignada, horas en formato (HH,MM)");
                     double salario = in.nextDouble();
                     String nombreEmpleado = in.next();
                     String contrato = in.next();
@@ -68,7 +68,7 @@ public class LABORATORIOPUNTO2 {
                 System.out.println(Tienda1.listaProductos());
                 break;
             case 4: System.out.println("LOS EMPLEADOS DE LA TIENDA " + Nombre_Tienda + " SON:");
-                Tienda1.listaEmpleados();
+                System.out.println(Tienda1.listaEmpleados());
                 break;
             case 5:
                 System.out.println("INTRODUZCA LOS DATOS DEL PEDIDO:");
