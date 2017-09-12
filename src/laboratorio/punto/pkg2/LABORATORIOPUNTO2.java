@@ -11,7 +11,7 @@ public class LABORATORIOPUNTO2 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
+        int continuar= 1;
         System.out.println("************ BIENVENIDO A TU TIENDA VIRTUAL ************");
         System.out.println("Por favor ingrese los datos de la tienda:");
         System.out.println("Ingrese el Nombre de la Tienda y el Nombre del Dueño:");
@@ -20,7 +20,8 @@ public class LABORATORIOPUNTO2 {
         Tienda Tienda1 = new Tienda(Nombre_Tienda, Nombre_Dueño);
         Contabilidad contabilidad = new Contabilidad();
         Inventario inventario = new Inventario();
-
+        
+        do{
         System.out.println(" ***** BIENVENIDO AL MENU DE LA TIENDA " + Nombre_Tienda + " *****");
         System.out.println(" ¿QUE OPCION DESEA ESCOGER? :");
         System.out.println("1. AGREGAR UN PRODUCTO");
@@ -51,7 +52,7 @@ public class LABORATORIOPUNTO2 {
                 int Noempleado = in.nextInt();
                 for ( int i = 0; i < Noempleado ; i++){
                     System.out.println("Datos Empleado "+(i+1)+" :");
-                    System.out.println("Digite el salario, el nombre del empleado, Duracion del contrato, la hora de Entrada y la hora de Salida");
+                    System.out.println("Digite el salario, el nombre del empleado, Duracion del contrato en letras, la hora de Entrada asignada y la hora de Salida asignada");
                     double salario = in.nextDouble();
                     String nombreEmpleado = in.next();
                     String contrato = in.next();
@@ -63,15 +64,15 @@ public class LABORATORIOPUNTO2 {
                 }
                 System.out.println("");
                 break;
-            case 3: System.out.println("LOS PRODUCTOS DE LA TIENDA " + Nombre_Tienda + "SON:");
-                Tienda1.listaProductos();
+            case 3: System.out.println("LOS PRODUCTOS DE LA TIENDA " + Nombre_Tienda + " SON:");
+                System.out.println(Tienda1.listaProductos());
                 break;
             case 4: System.out.println("LOS EMPLEADOS DE LA TIENDA " + Nombre_Tienda + " SON:");
                 Tienda1.listaEmpleados();
                 break;
             case 5:
                 System.out.println("INTRODUZCA LOS DATOS DEL PEDIDO:");
-                System.out.println("Ingrese el nombre del Proveedor, la fecha Limite A Pagar y el dia, mes y año de realizacion del pedido:");
+                System.out.println("Ingrese el nombre del Proveedor, la fecha Limite A Pagar ( en formato DD.MM )y el dia, mes y año de realizacion del pedido:");
                 String nombreProveedor = in.next();
                 double fechaLimiteAPagar = in.nextDouble();
                 int Dia = in.nextInt();
@@ -179,8 +180,9 @@ public class LABORATORIOPUNTO2 {
             default: System.out.println("Opcion no valida");
                 break;
         }
-                      
+                  
                 
+        }while(continuar==1);
     }
-
+        
 }

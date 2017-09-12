@@ -65,6 +65,7 @@ public class Tienda {
             info += "Tipo de Producto: " + producto.get(i).getTipoProducto() + ":\n";
         }
         return info;
+        //System.out.println(info);
     }
 
     public String listaEmpleados() {
