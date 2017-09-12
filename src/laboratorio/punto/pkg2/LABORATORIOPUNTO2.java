@@ -180,8 +180,6 @@ public class LABORATORIOPUNTO2 {
             default: System.out.println("Opcion no valida");
                 break;
         }
-                  
-                
         }while(continuar==1);
     }
         
