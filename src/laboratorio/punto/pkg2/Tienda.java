@@ -62,7 +62,7 @@ public class Tienda {
         for (int i = 0; i < producto.size(); i++) {
             info += "Info. Producto " + (i + 1) + "\n";
             info += "Nombre: " + producto.get(i).getNombre() + "\n";
-            info += "Precio: " + producto.get(i).getPrecioVenta() + "\n";
+            info += "Precio: $" + producto.get(i).getPrecioVenta() + "\n";
             info += "Tipo de Producto: " + producto.get(i).getTipoProducto() + "\n";
             info += "\n";
         }

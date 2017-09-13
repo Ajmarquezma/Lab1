@@ -47,6 +47,7 @@ public class Contabilidad {
             if ((Dia == v.getFecha().getDia()) && (Mes == v.getFecha().getMes()) && (Año == v.getFecha().getAño())) {
                 System.out.println(v);
             } else {
+                System.out.println("Este día no se han realizado ventas");
             }
         }
 
@@ -68,6 +69,7 @@ public class Contabilidad {
             if (Mes == v.getFecha().getMes() && (Año == v.getFecha().getAño())) {
                 System.out.println(v);
             } else {
+                System.out.println("Este mes no se han realizado ventas");
             }
         }
 
